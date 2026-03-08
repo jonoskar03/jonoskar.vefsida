@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -45,13 +46,123 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h1>Assignment 3</h1>
+										<h1>Assignment 3 - 3D Printing and 3D Scanning</h1>
 									</header>
+									<p>In this assignment, I am required to design a small model (a maximum of 100 g of plastic) to be 3D printed. The model should not be possible to make using subtractive manufacturing (additive vs. subtractive). Before printing the full part, I need to carry out smaller tests on the 3D printer to determine the design rules and limitations. Another part of this assignment is 3D scanning an object of my choice. Lastly, I am required to explain the process and what I learned from it.</p>
+									<h2>3D Printing</h2>
+									<figure id="fig-design2_123" style="text-align: center;">
+									  <img src="images/verkefni3/final.jpg" alt="Second design" style="max-width: 90%; height: auto;">
+									  <figcaption><b>Figure 1.</b> 3D-model </figcaption>
+									</figure>
+									<p>While making a dart holder and phone holder in <a href="assignment2.html">Assignment 2</a>, I decided to 3D print the holder for the dart components. This allowed me to be a little more creative with the design. I also wanted the component holder to be easy to assemble and disassemble from the main assembly. I did not really have a specific inspiration when creating this part, but I knew what it needed to include. It required three compartments: one for the feathers, one for the shafts, and another for the shaft rings. Lastly, it needed an attachment feature so it could be assembled with the phone holder, and that feature would not be possible to make using subtractive manufacturing. The locking attachment includes undercut geometry that is easy to print additively as one part, but difficult to machine subtractively from a solid block without splitting the part into multiple pieces.</p>
 
+									<h3>1st Design</h3>
+									<p>Below is the first draft that I made. There are three compartments, the thin cylinders are used to hold the shaft rings, and I planned to use a keyhole to assemble the part to the phone holder. The following concerns for this part were:</p>
+
+									<ul>
+									  <li>The angle of the chamfer may be too shallow relative to the horizontal axis. In <a href="https://fabacademy.org/2020/labs/leon/students/adrian-torres/week05.html">https://fabacademy.org/2020/labs/leon/students/adrian-torres/week05.html</a>, they discuss some 3D printers and their allowable overhang angles before support is needed. The closer a surface is to horizontal, the greater the risk that it cannot be printed without supports.</li>
+
+									  <li>The thin cylinders: online, you can find that thin cylinders can cause several problems. One issue is that the layers may not have enough time to cool before the next layer is added, which can create a stuttering effect like the one shown in this video <a href="https://www.youtube.com/watch?v=BJC7yj1GPHY">https://www.youtube.com/watch?v=BJC7yj1GPHY</a>. There are also some other potential problems to check.</li>
+
+									  <li>The attachment and its offset from the part: in its current state, this would require supports when 3D printed, and the assembly on the phone holder might not be as stable as I would have liked.</li>
+									</ul>
+
+									<div class="row aln-center">
+										<iframe
+											src="https://a360.co/4tVTQTF"
+											style="width: 874px; height: 668px; border: 0;"
+											allowfullscreen
+											webkitallowfullscreen
+											mozallowfullscreen>
+										</iframe>
+									</div>
+
+									<h4>2nd Design</h4>
+									<p>To improve the design, I decided to use a different wall attachment, shown in Figure 1 below. The attachment should go into the wall at a certain angle and then be turned slightly to lock it in place at 90 degrees.</p>
+									<figure id="fig-design2_1" style="text-align: center;">
+									  <img src="images/verkefni3/assign3_2nd_design.jpg" alt="Second design" style="max-width: 90%; height: auto;">
+									  <figcaption><b>Figure 2.</b> Second design.</figcaption>
+									</figure>
+									<p>I read about the ideal wall thickness for 3D printing and noted that the default extrusion width in PrusaSlicer is 0.45 mm, so I made most of the walls 0.45 × 6 lines = 2.7 mm thick. I then saved the part from Fusion as a .3mf file and opened it in the PrusaSlicer app to check the total print time, material usage, and any errors the app identified (overhang perimeters).</p>
+									<figure id="fig-design-comparison_1" style="text-align: center;">
+									  <div style="display: flex; gap: 12px; justify-content: center;">
+										<img src="images/verkefni3/assign3_2nd_design2.jpg" style="width: 48%; height: auto;" alt="Second design version 1">
+										<img src="images/verkefni3/assign3_2nd_design3.jpg" style="width: 48%; height: auto;" alt="Second design version 2">
+									  </div>
+									  <figcaption><b>Figure 3.</b> In Prusa Slicer.</figcaption>
+									</figure>
+									<p>The estimated print time was 7 hours and 36 minutes, which I felt was too much. A lot of that time was spent on internal infill because the rings compartment needed to be smaller than the other component compartments. I decided to move it down to the bottom, and that fixed the issue, although I then had to move the attachments to the other side.</p>
+									<h4>Testing parts of the design</h4>
+									<p>To make sure that everything in the prototype would work, I 3D printed some individual features of the design to check whether the printer could handle them and how accurate the dimensions would be on certain parts. These are the resulting printed parts.</p>
+									<figure id="fig-design-comparison_2" style="text-align: center;">
+									  <div style="display: flex; gap: 12px; justify-content: center;">
+										<img src="images/verkefni3/assign3_design4.jpg" style="width: 48%; height: auto;" alt="Second design version 1">
+										<img src="images/verkefni3/assign3_design5.jpg" style="width: 48%; height: auto;" alt="Second design version 2">
+									  </div>
+									  <figcaption><b>Figure 4.</b> Tests</figcaption>
+									</figure>
+									<p>They all turned out quite well. The cylinders were the correct size, and I could fit the rings around them.</p>
+
+									<p>The shallowest slope I had from the horizontal line was 40 degrees, so I tested whether the printer could do that, and it could.</p>
+
+									<p>The only issue came from the wall attachments, where the gap needed to be 3 mm, or at least close enough to that dimension, to be a press fit with the wall. I tested it on a plate that was 3 mm thick, and it was not a press fit; there was a significant gap of around 0.8 mm. This meant that it would not lock into place with the wall. However, all the parts were much stronger than I had anticipated, so it would be acceptable for the attachment to simply act as hooks on the wall. Because of that, the dimensions did not need to be changed.</p>
+
+
+									<h4>Final Design of the part</h4>
+									<p>The final design took about 4 hours and 30 minutes to print, and it only used supports for the upper attachment, as you can see in Figure 4 below. I used the 0.20 mm SPEED profile, 15% infill, a brim, and supports for enforcers only. I used paint-on supports to select the places where I wanted supports, exported the G-code to an SD card, inserted it into the 3D printer, and started the print.</p>
+
+									<figure id="fig-design2_2" style="text-align: center;">
+									  <img src="images/verkefni3/assign3_design6.jpg" alt="Second design" style="max-width: 90%; height: auto;">
+									  <figcaption><b>Figure 5.</b> Final PrusaSlicer.</figcaption>
+									</figure>
+
+									<p>Here you can see a short video of the 3D print</p>
+									<video controls width="600">
+									  <source src="Video%20Project.mp4" type="video/mp4">
+									  Your browser does not support the video tag.
+									</video>
+									<h3>Final Design</h3>
+									<p>Here is the final design, here you can see that the attachments and the curved bottom below could not be done with subractive manufacturing</p>
+									<div class="row aln-center">
+										<iframe
+											src="https://a360.co/4ruOk8Y"
+											style="width: 874px; height: 668px; border: 0;"
+											allowfullscreen
+											webkitallowfullscreen
+											mozallowfullscreen>
+										</iframe>
+									</div>
+
+									<h2>3D Scanning</h2>
+									<p>For the 3D scan, I chose to scan a dinosaur-shaped candle from my home. I used the KIRI Engine app, which allowed me to take around 150 photos of the object and generate a 3D model from them. It took a few attempts to get a good result, as the scan was quite sensitive to the lighting conditions, but after adjusting the lighting around the object, the final scan turned out well.</p>
+									<figure id="fig-design2_2" style="text-align: center;">
+									  <img src="images/verkefni3/blender_1.jpg" alt="Second design" style="max-width: 90%; height: auto;">
+									  <figcaption><b>Figure 6.</b> Object in Blender.</figcaption>
+									</figure>
+									<p>The scan was exported as a zip file containing three files: an <code>.obj</code>, an <code>.mtl</code>, and a texture image file. However, the 3D model also included parts of the stool that the dinosaur was placed on during the scan. To clean this up, I imported the files into Blender. In Blender, I entered <strong>Edit Mode</strong> by pressing <strong>Tab</strong>, selected the parts of the stool that had been captured, and deleted them from the mesh. After cleaning the model, I exported it as a <code>.glb</code> file so it could be displayed more easily on a website.</p>
+									<p>Below is an interactive 3D view of the scanned object.</p>
+									<div style="text-align: center; margin: 2rem 0;">
+										<model-viewer
+											src="3dskann.glb"
+											alt="3D scan of object"
+											camera-controls
+											auto-rotate
+											ar
+											shadow-intensity="1"
+											style="width: 100%; max-width: 900px; height: 600px; margin: 0 auto; background: #f5f5f5;">
+										</model-viewer>
+									</div>
+									<p>I think the final scan captured the overall shape of the dinosaur candle quite well, and the object is still easy to recognize in the 3D model. Despite that, it could have had more even lighting, a simpler background, and a clearer separation between the object and its surroundings would likely have improved the result. It also generally helps to take many overlapping photos from different angles so that all parts of the object are captured more accurately.</p>
+									<h3>Final Thoughts</h3>
+									<p>This assignment gave me a much better understanding of both the possibilities and the limitations of additive manufacturing and 3D scanning. In the 3D printing part, I learned how important it is to design with the manufacturing process in mind, especially when considering wall thickness, overhangs, support material, print time, and fit between parts. Testing smaller features before printing the final part helped me improve the design and avoid larger mistakes. In the 3D scanning part, I learned that lighting and the surrounding environment have a major effect on scan quality, and that some post-processing is usually needed to clean the final model. Overall, this assignment showed me the value of iteration, testing, and adjusting a design based on real manufacturing results.</p>
+
+									<h3>Thingiverse</h3>
+									<p>All files from this assignment can be found here, <a href="https://www.thingiverse.com/thing:7306218">https://www.thingiverse.com/thing:7306218</a>.</p>
 								</div>
 							</section>
 
 					</div>
+
 
 				<!-- Contact -->
 					<section id="contact">
