@@ -1,0 +1,375 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Project - Wine Robot Workbook</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			figure {
+				margin: 2em 0;
+				text-align: center;
+			}
+
+			figure img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 4px;
+			}
+
+			figcaption {
+				margin-top: 0.75em;
+				font-size: 0.95em;
+			}
+
+			.day-block {
+				margin-bottom: 3.5em;
+				padding-bottom: 2em;
+				border-bottom: 1px solid rgba(255,255,255,0.12);
+			}
+
+			.day-block:last-child {
+				border-bottom: none;
+			}
+
+			.note-box {
+				padding: 1.25em;
+				border: 1px solid rgba(255,255,255,0.18);
+				border-radius: 6px;
+				margin: 1.5em 0 2em 0;
+			}
+
+			.placeholder-note {
+				font-size: 0.95em;
+				opacity: 0.9;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Jón Óskar</strong> <span>Wine Robot</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="aboutme.html">About Me</a></li>
+							<li><a href="resume.html">My Resume</a></li>
+							<li><a href="assignment1.html">Assignment 1</a></li>
+							<li><a href="assignment2.html">Assignment 2</a></li>
+							<li><a href="assignment3.html">Assignment 3</a></li>
+							<li><a href="finalassignment.html">Final Assignment</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<section id="one">
+							<div class="inner">
+								<header class="major">
+									<h1>Wine Robot Project - Workbook</h1>
+									<h2>Jón Óskar Guðmundsson and Zoraiz Ahmad</h2>
+								</header>
+
+								<p>This workbook shows the development of our wine robot project from the first design ideas to the final stage. The goal of the robot was to pick up a wine glass, move it to the required position, measure the wine temperature, identify whether the drink was red or white wine, and tilt the glass to give one sip. The project included CAD design, prototyping, electronics, coding, laser cutting, and 3D printing.</p>
+
+
+								<div class="day-block">
+									<h3>March 15 - Requirements of robot and initial planning</h3>
+									<p>We began by reviewing the project requirements and listing what the robot had to do. The robot needed to pick up a wine glass, move it up by 0.35 m and forward or sideways by 0.2 m, tilt the glass to serve one sip, and return it to the starting position. The robot also had to stay within the required size limits and display temperature, wine type, and a live camera feed on a website.</p>
+									<p>We started by checking out the equipment available in VR3. This helped us identify the main components that could be used, including two stepper motors, stepper drivers, a servo motor, a waterproof temperature sensor, and a camera module.</p>
+								</div>
+								<div class="day-block">
+									<h3>March 16 - Early design ideas</h3>
+									<p>On this day we focused on possible robot mechanisms. We looked into using a four-bar linkage so that the glass holder would remain upright while the arm moved. This would allow the robot to lift and move the wine glass without needing a separate motor just to keep the glass level. It was definitely something we wanted to use.</p>
+									<p>We also checked on some other designs that would help reduce torque so that the motors could move more smoothly. There are plenty of methods to do that, having counterweight on the arm, using springs or gas struts, although its unlikely we can get good springs or gas struts. </p>
+
+									<figure>
+										<img src="images/wine-robot/four_bar_linkage_idea.jpg" alt="Four-bar linkage concept" />
+										<figcaption><b>Figure 1.</b> Linkage idea.</figcaption>
+									</figure>
+
+									<figure>
+										<img src="images/wine-robot/counterweight_idea.jpg" alt="Counterweight or spring inspiration" />
+										<figcaption><b>Figure 2.</b> Counterweight idea.</figcaption>
+									</figure>
+								</div>
+
+								<div class="day-block">
+									<h3>March 17 - Beginning the robot design</h3>
+									<p>We started turning the concept into an actual robot design. One idea was to use a belt system from an old printer so that the motor for the second arm could be positioned closer to the base. That would reduce the weight carried by the arm and make the system more stable.</p>
+									<p>We also thought about the risk of the robot tipping over. Because of this, we considered different placements for the large stepper motor and how a gearbox might help if the base motor had to be moved farther away.</p>
+
+									<figure>
+										<img src="images/wine-robot/belt_drawing.jpg" alt="Sketch for moving the second arm using a belt" />
+										<figcaption><b>Figure 3.</b> Sketch of belt for driving the second arm while keeping the motor near the base.</figcaption>
+									</figure>
+
+								</div>
+
+								<div class="day-block">
+									<h3>March 18 - Modelling the first parts</h3>
+									<p>We began designing the main parts in Fusion 360. The first components modelled were the robot base, the gearbox area, and the parameters needed for the large stepper motor and the first arm. This gave us a much clearer idea of how the arm would be assembled physically.</p>
+
+									<figure>
+										<img src="images/wine-robot/parameters_base.jpg" alt="Fusion 360 parameters for the robot base" />
+										<figcaption><b>Figure 4.</b> Example of parameters used for the base and motor mounting.</figcaption>
+									</figure>
+
+									<figure>
+										<img src="images/wine-robot/initial_design.jpg" alt="Early CAD model of the robot" />
+										<figcaption><b>Figure 5.</b> Initial design</figcaption>
+									</figure>
+								</div>
+
+								<div class="day-block">
+									<h3>March 19 - Improving the four-bar linkage</h3>
+									<p>We are now making the design so the first arm uses a proper four-bar linkage. We used a simple linkage program to understand the motion better and confirm that the end section would stay aligned as the arm moved. That alignment was essential because the wine glass needed to stay upright before the final tilt action.</p>
+
+									<figure>
+										<img src="images/wine-robot/four_bar_linkage_program.jpg" alt="Four-bar linkage simulation" />
+										<figcaption><b>Figure 6.</b> Simple linkage study showing how the upright section could stay aligned.</figcaption>
+									</figure>
+
+									<p>Line 3 in Figure 6 remains aligned throughout the motion, which means the wine glass stays upright.</p>
+									<figure>
+										<img src="images/wine-robot/second_design.jpg" alt="Updated CAD model with four-bar linkage" />
+										<figcaption><b>Figure 7.</b> Updated CAD model with the four-bar linkage.</figcaption>
+									</figure>
+									<p>This turned out wrong, the linkages are not in the correct place, and we should probably only use two plates for each arm, since we will probably be using acrylic plates for this and that is better to have thick and big rather than small and thin. </p>
+								</div>
+
+								<div class="day-block">
+									<h3>March 20 - Reviewing remaining tasks and refining the design</h3>
+									<p>We made a structured list of everything still left to do to help organize the project: finishing the design, calculating torque and center of mass, buying parts, wiring the electronics, coding the motors and sensors, and testing tolerances and holes.</p>
+									<p>At the same time, we continued improving the four-bar linkage layout so it is actually a four bar linkage that we want, here is it how it currently looks</p>
+
+									<figure>
+										<img src="images/wine-robot/third_design.jpg" alt="Task list and project planning" />
+										<figcaption><b>Figure 8.</b> First arm</figcaption>
+									</figure>
+
+									<figure>
+										<img src="images/wine-robot/fourth_design.jpg" alt="Intermediate arm design" />
+										<figcaption><b>Figure 9.</b> Second arm connection.</figcaption>
+									</figure>
+								</div>
+
+								<div class="day-block">
+									<h3>March 21 - Simplifying the arm connection</h3>
+									<p>We examined the connection between the first and second arms and found that one version looked too bulky and would make it difficult to use a timing belt on the second arm. Because of that, We simplified the connection design.</p>
+									<p>By the end of the day, the robot looked much cleaner and more practical. The new version made it possible to continue with a belt-driven second joint, which was one of the main design goals.</p>
+
+									<figure>
+										<img src="images/wine-robot/fifth_design.jpg" alt="Clunky connection concept" />
+										<figcaption><b>Figure 10.</b> Improved version</figcaption>
+									</figure>
+
+								</div>
+
+								<div class="day-block">
+									<h3>March 22 - Parts list and design priorities</h3>
+									<p>With the main arm layout becoming clearer, We made a more detailed list of the remaining priorities. The main tasks were reducing motor load through gearing or pulleys, designing the cup holder and tilt mechanism, calculating torque, buying missing parts, planning the wiring, and carrying out fit tests.</p>
+									<p>We also listed which components had already been bought(or available at VR3), including the two stepper motors and 8 mm rods, and what still needed to be purchased, such as washers, bearings, a servo motor, printing material, and timing belts. This day we went from making concept to focusing on building the robot.</p>
+
+									<h4>Glass holder</h4>
+									<p>We also designed the first design of the glass holder in Fusion. It would hold both the wine glass and the heat sensor would be inserted through a hole on the bottom of the part</p>
+
+									<figure>
+										<img src="images/wine-robot/cup_holder.jpg" alt="Robot arm model before final part selection" />
+										<figcaption><b>Figure 11.</b> Glass holder.</figcaption>
+									</figure>
+
+								</div>
+
+								<div class="day-block">
+									<h3>March 23 - Torque calculations</h3>
+									<p>This day we worked on torque calculations. We built an Excel sheet to estimate the maximum torque in the worst-case arm position, when the robot would be fully extended to its maximum required position. This was a key part of deciding whether the selected motors and gear ratios would be sufficient.</p>
+
+									<figure>
+										<img src="images/wine-robot/excel_1.jpg" alt="Cup holder concept" />
+										<figcaption><b>Figure 12.</b> Torque calculations</figcaption>
+									</figure>
+
+									<figure>
+										<img src="images/wine-robot/excel_2.jpg" alt="Torque calculation spreadsheet" />
+										<figcaption><b>Figure 13.</b> Torque calculations.</figcaption>
+									</figure>
+
+									<figure>
+									<img src="images/wine-robot/excel_3.jpg" alt="Toue calculation spreadsheet" />
+										<figcaption><b>Figure 14.</b> Torque results</figcaption>
+									</figure>
+									<p>We used 1.5 safety factor and got torque on motor 1 was 1.83 Nm and torque on motor 2 was 0.63 Nm. Based on these calculations, we went with a 3:1 ratio on the first motor, that gives 2.65 Nm, and on the second one we use 2:1 and therefore got 0.824 Nm.
+</p>
+								</div>
+
+								<div class="day-block">
+									<h3>March 24 - Preparing for laser-cutting</h3>
+									<p> We tested hole sizes for the rods and mounting screws so that the laser-cut parts would fit correctly. Based on these tests, We chose different hole sizes depending on whether a rod needed to rotate freely or stay fixed.</p>
+									<p>We also started 3D printing the glass holder, finished laser cutting most of the parts and calculated the center distance required for the timing belt system. This was one of the most productive days since we managed to get most of the physical parts we needed.</p>
+
+									<figure>
+										<img src="images/wine-robot/teeth_belt.jpg" alt="Motor dimensions and fit tests" />
+										<figcaption><b>Figure 15.</b> Timing belt that was bought.</figcaption>
+									</figure>
+
+									<figure>
+										<img src="images/wine-robot/teeth_belt_calc.jpg" alt="Timing belt and center distance calculation" />
+										<figcaption><b>Figure 16.</b> Belt selection and calculation of the pulley center distance.</figcaption>
+									</figure>
+								</div>
+
+								<div class="day-block">
+									<h3>March 25 - Pulleys and motor testing</h3>
+									<p>On this day we designed and printed the pulleys for the timing belt, the information was quite hard to find for this type of belt but eventually we found it.</p>
+									<p> We then started wiring the motors on a breadboard and testing them. It took some time to get the electronics working, but by the end the motors were able to run, which can be seen in this video below.</p>
+
+									<video controls width="600">
+									  <source src="motor_test.mp4" type="video/mp4">
+									  Your browser does not support the video tag.
+									</video>
+
+									<figure>
+										<img src="images/wine-robot/pulley_1.jpg" alt="Pulley CAD model" />
+										<figcaption><b>Figure 17.</b> Pulley model created for the XL timing belt.</figcaption>
+									</figure>
+									<h4>Assembling the Wine robot</h4>
+									<p>Unfortunately when we started assembling the wine robot we realized that pressfit is not enough to keep the plate of the arms stuck to the rods, it will happen that the rods moves by itself, or the plate moves by itself</p>
+								</div>
+
+								<div class="day-block">
+									<h3>March 26 - New approach after assembly issues</h3>
+									<p>After being given extra time we had to figure out how to make the plates and gears stuck to the rods. We decided to file one flat face on the rods and redesign the laser-cut arm plates so their holes would also have a flat side. This would create a better lock between the rods and the structure.</p>
+
+									<figure>
+										<img src="images/wine-robot/filed_rod.jpg" alt="Electronics setup and testing" />
+										<figcaption><b>Figure 18.</b> Filed rod.</figcaption>
+									</figure>
+
+
+								</div>
+
+								<div class="day-block">
+									<h3>March 27 - Fixing the pulley geometry</h3>
+									<p>The first prints of the pulleys did not come out correctly, there was something wrong. Turns out its a little visually misleading image we were using, where the shorter gap is actually the bigger gap and the bigger gap is actually smaller</p>
+									<p>Another issue was that we calculated the inner diameter of the pulleys incorrectly, but that was easily fixed by simply using the outer diameter(which was given on the internet) instead to make the pulleys.</p>
+									<figure>
+										<img src="images/wine-robot/pulley_measurements.jpg" alt="Rod filing work" />
+										<figcaption><b>Figure 19.</b> Teeth of belt measurements.</figcaption>
+									</figure>
+									<p>After this we started to print the some of the same parts again, but this time to be fitted with the filed rods.</p>
+								</div>
+
+								<div class="day-block">
+									<h3>March 28 - Rebuilding the base and designing the end connector</h3>
+									<p>We designed a connector part at the end of the second arm. This part was intended to carry the color sensing solution and the servo motor for the tilt mechanism. We made a screw-fit test for the servo mounting so the 3D printed part would assemble properly.</p>
+
+									<figure>
+										<img src="images/wine-robot/connector.jpg" alt="New wider base plate" />
+										<figcaption><b>Figure 20.</b> Connector part.</figcaption>
+									</figure>
+									<p>After that we started assembling the robot.</p>
+								</div>
+
+								<div class="day-block">
+									<h3>March 29 - Final assembly</h3>
+									<p>We finished assembling the robot arm which can be seen here</p>
+									<figure>
+										<img src="images/wine-robot/arm_robot_full.jpg" alt="Second arm connector design" />
+										<figcaption><b>Figure 21.</b> Fully completed arm robot</figcaption>
+									</figure>
+
+									<p>Now we connected every electronic on to the breadboard and started testing each separately.</p>
+								</div>
+								<div class="day-block">
+									<h3>March 30 - Final testing and what went wrong</h3>
+									<p>First up was testing the big stepper motor that moves the whole arm. It did at first not work for the whole arm currently but it moves when we have only one arm attached. Also the we seem to have filed a bit too much on the axle that holds the gear so there is small degree where nothing moves except the gears.
+										After changing the code and adjusting the voltage on the power adapter the motor can now move the full arm. We also filed a new rod so that it fits more tightly with the gear. This is the only video we took of it, but we did manage to move it further than this.
+									</p>
+									<video controls style="max-width: 100%; height: auto;">
+									  <source src="all_arm_moving.mp4" type="video/mp4">
+									  Your browser does not support the video tag.
+									</video>
+									<p>After that checked the movement of the second joint for the second motor, the motor was not able to move the arm, it kept jumping teeth on the teeth belt. No matter what we tried we could not get it to work. Possible problems were that there was too much torque required, the belt would get slightly misaligned during the process which causes it to not work. That misalignment is due to the main joints on the first arms being misaligned, that is the holes on the base plates.</p>
+									<p>We then tried making half the length of the second arms to see if motor 2 could then do it. That worked but it made it so we could not move 40 cm away from starting point. Here is a video showing the mechanism working on one arm plate</p>
+									<video controls style="max-width: 100%; height: auto;">
+									  <source src="second_arm_moving.mp4" type="video/mp4">
+									  Your browser does not support the video tag.
+									</video>
+									<p>Now we tried moving both of the motors at the same time, unfortunately that is when the axle on the first motor started moving independently of the gear connected to it. That made it so the motor did not move the arm. We tried attaching aluminum foil around the motor axle to make the gear move with it but it did not work. The issue could be that the gear is simply too small, the gear ratio needed to be 3:1 but we made the gear so small that the force on the motor would rather resist movement on the gear rather than move the robot arm.</p>
+								</div>
+
+								<h2>Final reflection</h2>
+								<p>Even though the final robot did not fully work, the project still taught us much about the process of creating something under much time pressure. We should have made some plan from the beginning where we estimate how much time every task takes (design, tests, coding etc) and where we should be in the process for each week. Doing smaller tests to begin with would've saved us a lot of time, for example for the pressfitted arms to the rods that did not work even though Fusion showed that it worked, or the misalignment of the rods of the base. If we were to do it again we would focus more on planning, making many small tests to save time, have some mechanism that reduced the load on the motors, like counterweighting. </p>
+							</div>
+						</section>
+					</div>
+
+				<!-- Contact -->
+					<section id="contact">
+						<section class="split">
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-envelope"></span>
+									<h3>Email</h3>
+									<a href="#">jog73@hi.is</a>
+								</div>
+							</section>
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-phone"></span>
+									<h3>Phone</h3>
+									<span>(+354) 777-6768</span>
+								</div>
+							</section>
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-home"></span>
+									<h3>Address</h3>
+									<span>Dalaþing 16<br />
+									203 Kópavogur<br />
+									Iceland</span>
+								</div>
+							</section>
+						</section>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Jón Óskar Guðmundsson. All rights reserved</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
