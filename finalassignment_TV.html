@@ -1,0 +1,547 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Final Assignment - Forty by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.workbook-entry {
+				margin: 0 0 3em 0;
+				padding-bottom: 2.25em;
+				border-bottom: solid 1px rgba(212, 212, 255, 0.1);
+			}
+
+			.workbook-entry:last-child {
+				border-bottom: 0;
+			}
+
+			.workbook-entry h2 {
+				margin-bottom: 0.75em;
+			}
+
+			.workbook-entry h3 {
+				margin-top: 1.75em;
+				margin-bottom: 0.75em;
+			}
+
+			.workbook-entry p {
+				margin-bottom: 1em;
+			}
+
+			figure {
+				margin: 1.5em 0 2em 0;
+			}
+
+			figure img {
+				width: 100%;
+				max-width: 760px;
+				border-radius: 0.35em;
+				display: block;
+			}
+
+			figcaption {
+				font-size: 0.85em;
+				opacity: 0.8;
+				margin-top: 0.6em;
+			}
+
+			.image-grid {
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 1.25em;
+				margin: 1.5em 0 2em 0;
+			}
+
+			.image-grid figure {
+				margin: 0;
+			}
+
+			pre {
+				background: rgba(255, 255, 255, 0.05);
+				border: solid 1px rgba(212, 212, 255, 0.1);
+				padding: 1em;
+				overflow-x: auto;
+				border-radius: 0.35em;
+			}
+
+			code {
+				font-family: "Courier New", monospace;
+				font-size: 0.95em;
+			}
+
+			.note-box {
+				background: rgba(255, 255, 255, 0.05);
+				border-left: solid 4px #9bf1ff;
+				padding: 1em 1.25em;
+				margin: 1.5em 0;
+			}
+
+			@media screen and (max-width: 736px) {
+				.image-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="aboutme.html">About Me</a></li>
+							<li><a href="resume.html">My Resume</a></li>
+							<li><a href="assignment1.html">Assignment 1</a></li>
+							<li><a href="assignment2.html">Assignment 2</a></li>
+							<li><a href="assignment3.html">Assignment 3</a></li>
+							<li><a href="finalassignment.html">Final Assignment</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Final Assignment Mechatronics</h1>
+										<h4>Jón Óskar Guðmundsson and Zoraiz Ahmad</h4>
+									</header>
+
+									<p>This is the workbook for the final assignment in Tölvustýrður Vélbúnaður. The project is a prototype shelf-scanning robot that moves along a shelf, takes images of book or DVD spines, and sends the information to an Excel document.</p>
+
+									<section class="workbook-entry">
+										<h2>3rd April</h2>
+										<h3>Trying to find a good idea</h3>
+										<p>Ideas:</p>
+										<ul>
+											<li>Something related to AI, using a Raspberry Pi to connect a robot to AI, although we were not sure what the use of it would be.</li>
+											<li>AI-controlled sorting of screws and small parts.</li>
+											<li>AI-controlled sorting of trash into plastic, paper, and organic waste.</li>
+											<li>A glove that connects to a computer, where you can take notes and draw simple images.</li>
+											<li>An alarm clock that wakes you up not only with sound but also with light, and maybe also opens up the window to let some fresh air in.</li>
+											<li>Essentially a vacuum cleaner that is always on and sucks up dust around the area of your high-end PC so that there will be much less dust going into the PC. It could also be used to clean tight areas like under the bed or under cupboards. However, that is a lot of work and we probably would not have time to create a good vacuum cleaner.</li>
+										</ul>
+									</section>
+
+									<section class="workbook-entry">
+										<h2>5th April</h2>
+										<p>We decided to do none of those ideas and instead do this. We will do a prototype shelf-scanning system that moves along a shelf and records the books on said shelf. It will put those book titles into an Excel document with the bookshelf name.</p>
+
+										<h3>Planning</h3>
+										<p>We are expecting this to take about 60 hours for each person, which means we will have to plan our time very carefully. For the wine robot, we spent too much time on the CAD design and not enough time on the electronic part or doing tests. Also, this project is more focused on electrical and programming work than the wine robot was. The 60 hours do not include the time it takes to make the CAD design, since it will be done in a final assignment in another class, Tölvuvædd Hönnun.</p>
+
+										<h3>Goals</h3>
+										<p>To build a robot that moves left to right on shelves. It has a camera that either takes pictures of books/DVDs or takes a live recording of them. That recording is then processed by some AI bot that reads the names of those books/DVDs and puts them into an Excel document, along with the name of that shelf, so it is easy to find said book/DVD. The robot should not be connected directly to a computer but instead use some other form of communication. For the robot to consistently be able to get the correct information from books, it will probably need to have lighting that is always about the same, so we will have to include lights on the robot. It will also have a sensor, HC-SR04, that senses when the robot is getting too close to the shelf wall, and at that point the robot can shut off. It would be good to have the robot adjust to different thicknesses of shelves, but since it is only a prototype, that should only be something extra we could do if we have time.</p>
+
+										<h3>Risk management</h3>
+										<p>In order to not have things fail after having printed the final prototype, we will have to do smaller tests for each component to make sure that it is working properly.</p>
+										<p>Here are some tests, in order, that will have to be done, but there might be more:</p>
+										<ol>
+											<li>Testing communication with the laptop without being connected directly.</li>
+											<li>Testing the movement of the robot to see if it is smooth and precise.</li>
+											<li>Testing the safety stop sensor.</li>
+											<li>Testing AI ability to get the book names correct, with different lighting and speed of movement. Reflections and an out-of-focus camera could have negative effects.</li>
+											<li>Testing the data going into an Excel document.</li>
+											<li>Integrating everything together and retesting everything.</li>
+										</ol>
+
+										<h3>Time management</h3>
+										<ol>
+											<li>Making and testing AI abilities: 12–18 hours.</li>
+											<li>Sending data into Excel: 4–8 hours.</li>
+											<li>Communication with laptop: 8–12 hours.</li>
+											<li>Robot movement smooth and precise: 14–20 hours.</li>
+											<li>Safety stop sensor: 6–10 hours.</li>
+											<li>Integrating: 8–12 hours.</li>
+										</ol>
+										<p>That totals around 50–70 hours in total, but these are just rough estimates.</p>
+									</section>
+
+									<section class="workbook-entry">
+										<h2>7th April</h2>
+										<p>We are going to prepare the AI tool that will read the titles from the images taken by the camera. We will use OCR to read titles on the books. While diving into how this works, it became much clearer that we should start by testing the ESP32 camera to test its limitations and get more of a feel for the camera. Then we can start creating Python code to read the titles based on that.</p>
+									</section>
+
+									<section class="workbook-entry">
+										<h2>8th April</h2>
+										<p>Tested the XIAO ESP32-S3 with the OV3660 camera. It did not come out great. We put some light with it, but it still would not be able to read some books.</p>
+										<figure>
+											<img src="images/finala_mecha/april8.jpg" alt="OV3660 camera test with books on a shelf" />
+											<figcaption>OV3660 camera test with books on a shelf.</figcaption>
+										</figure>
+										<p>It is definitely possible to tune this with better lighting and a better angle, but probably not to the point where we get every title on there. We will also test the OV5640 camera, which should be better.</p>
+										<p>Making the description of the project.</p>
+									</section>
+
+									<section class="workbook-entry">
+										<h2>9th April</h2>
+
+										<h3>Testing the OV5640</h3>
+										<p>Like this with:</p>
+										<pre><code>s-&gt;set_hmirror(s, 1);
+s-&gt;set_vflip(s, 0);</code></pre>
+
+										<figure>
+											<img src="images/finala_mecha/april9.jpg" alt="OV5640 test image with hmirror 1 and vflip 0" />
+											<figcaption>OV5640 test image using hmirror = 1 and vflip = 0.</figcaption>
+										</figure>
+
+										<p>Like this with:</p>
+										<pre><code>s-&gt;set_hmirror(s, 1);
+s-&gt;set_vflip(s, 1);</code></pre>
+
+										<figure>
+											<img src="images/finala_mecha/april9_2.jpg" alt="OV5640 test image with hmirror 1 and vflip 1" />
+											<figcaption>OV5640 test image using hmirror = 1 and vflip = 1.</figcaption>
+										</figure>
+
+										<p>And the correct one is here:</p>
+										<pre><code>s-&gt;set_hmirror(s, 0);
+s-&gt;set_vflip(s, 1);</code></pre>
+
+										<figure>
+											<img src="images/finala_mecha/april9_3.jpg" alt="OV5640 test image with hmirror 0 and vflip 1" />
+											<figcaption>OV5640 test image using hmirror = 0 and vflip = 1.</figcaption>
+										</figure>
+
+										<p>But it is upside down.</p>
+										<p>So:</p>
+										<pre><code>s-&gt;set_hmirror(s, 1);
+s-&gt;set_vflip(s, 0);</code></pre>
+
+										<figure>
+											<img src="images/finala_mecha/april9_4.jpg" alt="OV5640 final orientation test" />
+											<figcaption>Final orientation test for the camera.</figcaption>
+										</figure>
+
+										<p>We could use a locking knob to lock the wheels into the correct shelf thickness, maybe from a music sheet stand.</p>
+
+
+											<p><strong>Issues:</strong> The idea was to have the robot lock to the shelf with the wheels, but that means there is clamping on the wheels, which could affect the motor so it does not run. The idea was to use a simple stepper motor, 28BYJ-48, since there is not a lot of torque and not much weight on the part.</p>
+
+									</section>
+
+									<section class="workbook-entry">
+										<h2>10th April</h2>
+										<h3>Testing components</h3>
+										<h3>Motor</h3>
+										<p>Testing the stepper motor 28BYJ-48. It works fine with the tires.</p>
+										<p>The stepper motor connects to:</p>
+										<ul>
+											<li>Stepper motor driver
+												<ul>
+													<li>Connects to 5V.</li>
+													<li>Connects to GND.</li>
+													<li>Connects to four different digital pins.</li>
+												</ul>
+											</li>
+										</ul>
+										<p>We need to think about powering the ESP32-S3 with 5 volts, which is what all our components need to run smoothly.</p>
+
+										<figure>
+											<img src="images/finala_mecha/april10.jpg" alt="ESP32-S3 power pin information" />
+											<figcaption>Power pin information for the ESP32-S3.</figcaption>
+										</figure>
+
+										<p>Here it said we can use the 5V pin as an input rather than an output. We could use a 4 × 1.5V battery pack with a boost and buck converter to power all of the components.</p>
+
+										<h3>Lighting</h3>
+										<p>The lighting has to be able to be tuned for the camera. It needs to be bright enough to make a difference and has to be even lighting.</p>
+										<p>None of the LED lights in the Arduino kit are quite strong enough to have any difference.</p>
+										<p>After some consideration, we will use two LED strips on either side of the camera with see-through acrylic plates and baking paper to make the light even.</p>
+									</section>
+
+									<section class="workbook-entry">
+										<h2>12th April</h2>
+										<p>We are going to test the camera, light, and motor together with cardboard and tape. The goal of this testing is firstly to change the settings of the camera so that the images taken are very clear. Secondly, we will be checking how far away the camera needs to be from the books to be able to take a good picture of the lettering. By the end of this, we should also have a pretty good code that we will be able to use for the final prototype.</p>
+										<p>The lighting does not work if it is straight at the books, but it can work at an angle. Here is a picture showing the light shining directly towards the books.</p>
+
+										<figure>
+											<img src="images/finala_mecha/april12.jpg" alt="Lighting test with light shining directly towards the books" />
+											<figcaption>Lighting test with the light shining directly towards the books.</figcaption>
+										</figure>
+
+										<p>12 cm distance from the DVDs.</p>
+										<p>Around 8 cm height from the shelf.</p>
+
+										<figure>
+											<img src="images/finala_mecha/april12_2.jpg" alt="Distance test from camera to DVDs" />
+											<figcaption>Test image for deciding the camera distance from the DVDs.</figcaption>
+										</figure>
+
+										<p>After doing some tests for the required distance from the camera, we decided to only do a prototype for DVDs, or books similar to that size. The problem is that the books are of all different sizes and the lettering size is also quite different. This would require a different camera that can zoom out, but we do not have that.</p>
+										<p>We planned to test the wheels moving left to right with cardboard, but the cardboard always gave in, so the wheels did not properly latch onto the shelf plate. This means we will instead prepare a 3D-printed part, print it, and test again tomorrow.</p>
+
+										<h3>XIAO ESP32-S3 layout</h3>
+										<p>We are making the layout board for the XIAO ESP32-S3. The camera will be in the middle of the assembly, so the layout board will be the same. The wires will then either go left or right from that, so it would be best to have 5V and GND.</p>
+
+										<h3>Ultrasonic ranging - HC-SR04</h3>
+										<ul>
+											<li>Connects to:
+												<ul>
+													<li>D7 → Trig.</li>
+													<li>D10 → Echo through resistor divider.</li>
+													<li>GND.</li>
+													<li>5V.</li>
+												</ul>
+											</li>
+										</ul>
+
+										<h3>Stepper motor - 28BYJ</h3>
+										<ul>
+											<li>Connects to:
+												<ul>
+													<li>Stepper motor driver.</li>
+												</ul>
+											</li>
+										</ul>
+									</section>
+
+									<section class="workbook-entry">
+										<h2>13th April</h2>
+										<h3>Stepper motor driver - ULN2003</h3>
+										<ul>
+											<li>Connects to:
+												<ul>
+													<li>GND.</li>
+													<li>5V.</li>
+													<li>D0.</li>
+													<li>D1.</li>
+													<li>D2.</li>
+													<li>D3.</li>
+												</ul>
+											</li>
+										</ul>
+
+										<h3>LED strip × 2</h3>
+										<ul>
+											<li>Connects to:
+												<ul>
+													<li>GND.</li>
+													<li>5V.</li>
+												</ul>
+											</li>
+										</ul>
+
+										<h3>ESP32-S3</h3>
+										<ul>
+											<li>Connects to:
+												<ul>
+													<li>GND.</li>
+													<li>5V.</li>
+												</ul>
+											</li>
+										</ul>
+
+										<p>Did tests on the 3D printer for the fit between the wheels and the stepper motor. We did a +0.5 increment three times, since holes and gaps often come out smaller in the 3D print. The correct size ended up being somewhere between 0–0.5 mm increment. We will try using 0.08 mm.</p>
+									</section>
+
+									<section class="workbook-entry">
+										<h2>14th April</h2>
+										<p>Doing the press fit of a nut inside a hole for the locking mechanism of the wheels. This will make it so that we can adjust the distance between the wheels depending on different thicknesses of plates on the shelves. It also takes some demand off the stepper motor, since the wheels are not the primary clamping force on the plates of the shelf.</p>
+										<p>For an 8 mm hexagon, we determined it was best to use an 8.045 mm gap.</p>
+									</section>
+
+									<section class="workbook-entry">
+										<h2>15th April</h2>
+										<h3>Designing the part</h3>
+										<p>What to think about:</p>
+										<ul>
+											<li>Wheels have to be aligned and not loose so that they do not get misaligned.</li>
+											<li>Center of mass has to be on the wheels.</li>
+											<li>The camera should be around 12 cm distance from the DVDs/books, preferably more, and around 8 cm height from the shelf.</li>
+											<li>Light should be in front of the camera.</li>
+											<li>Shelf thicknesses are typically 15–25 mm.</li>
+										</ul>
+
+										<p>What needs to be in:</p>
+										<ul>
+											<li>Ultrasonic ranging × 1.</li>
+											<li>Stepper motor × 1.</li>
+											<li>LED strip × 2.</li>
+											<li>ESP32-S3 with camera on layout board × 1.</li>
+											<li>Jumper connectors.</li>
+										</ul>
+
+										<h3>Shelf height mechanism</h3>
+										<figure>
+											<img src="images/finala_mecha/april15.jpg" alt="Shelf height mechanism CAD model" />
+											<figcaption>Shelf height mechanism in CAD.</figcaption>
+										</figure>
+
+										<p>Made a board for the XIAO ESP32-S3.</p>
+										<figure>
+											<img src="images/finala_mecha/april15_2.jpg" alt="XIAO ESP32-S3 layout board" />
+											<figcaption>Layout board for the XIAO ESP32-S3.</figcaption>
+										</figure>
+
+										<p>After milling this, we should be able to test every component with the ESP32-S3 and with voltage input from a power adapter.</p>
+									</section>
+
+									<section class="workbook-entry">
+										<h2>18th April</h2>
+										<p>We are both finishing the design and 3D printing, and starting to make the AI tool that extracts the text from the books/DVDs. We will be using EasyOCR to extract the text from the images that are taken with the camera.</p>
+										<p>This is currently how it is reading:</p>
+
+										<figure>
+											<img src="images/finala_mecha/april18.jpg" alt="EasyOCR command line result" />
+											<figcaption>EasyOCR reading result from the first tests.</figcaption>
+										</figure>
+
+										<p><strong>HoBBft AN UNEYTECTED JOURN</strong>, from this image.</p>
+
+										<figure>
+											<img src="images/finala_mecha/april18_2.jpg" alt="Camera test image of Hobbit DVD spine" />
+											<figcaption>Camera test image used for the OCR test.</figcaption>
+										</figure>
+
+										<p>Also, it cannot read the other text since it is upside down.</p>
+										<p>Some common-sense AI tool should be able to notice that this is actually <em>Hobbit: An Unexpected Journey</em>. For that, we will use the OpenAI Responses API.</p>
+										<p>This is essentially the process it goes through after having gotten an image:</p>
+										<ol>
+											<li>OCR reads the image.</li>
+											<li>OCR returns rough text.</li>
+											<li>Python joins that OCR text into a string.</li>
+											<li>Python sends that string to the LLM.</li>
+											<li>LLM returns clean JSON.</li>
+											<li>Python saves the JSON to CSV.</li>
+										</ol>
+										<p>I have to create some API key to be able to use it. It costs some money for each run, so we will actually be using this last.</p>
+										<p>Right now, we have to find a way for the ESP32-S3 to send an image to our computer. We ran a code that can send to my computer by knowing the IP of the computer.</p>
+										<p>We also ran a Python code in CMD that waits for something to send data to the address <code>/upload</code>. When the ESP32 sends a JPEG with POST, it receives the raw image bytes, creates a folder called <code>received_images</code> if it does not already exist, and saves each incoming image as <code>img_0.jpg</code>, <code>img_1.jpg</code>, and so on.</p>
+										<p>And it works.</p>
+
+										<figure>
+											<img src="images/finala_mecha/april18_3.jpg" alt="Received images folder on the computer" />
+											<figcaption>Received images folder on the computer.</figcaption>
+										</figure>
+									</section>
+
+									<section class="workbook-entry">
+										<h2>19th April</h2>
+										<p>We are testing the camera reading, where we receive one image from the camera and the OCR reads it automatically and displays the text on the serial monitor. </p>
+
+										<h3>Finalising the design</h3>
+										<figure>
+											<img src="images/finala_mecha/april19_3.jpg" alt="Final design front view CAD model" />
+											<figcaption>CAD view of the design while finalising it.</figcaption>
+										</figure>
+
+										<p>We changed the design so that the center of mass of the assembly would be as close to the center of the upper wheel as possible.</p>
+										<p>It is not quite there, but it is pretty close. We can also move the wheel slightly closer to the center of mass, as it does have clearance for that. Plus, this is just an estimation. It does not include wires that can add weight.</p>
+
+										<figure>
+											<img src="images/finala_mecha/april19_4.jpg" alt="Final design side view CAD model" />
+											<figcaption>Side view of the design and center of mass consideration.</figcaption>
+										</figure>
+									</section>
+
+									<section class="workbook-entry">
+										<h2>20th April</h2>
+										<p>The OCR is not reading the names very well. Sometimes it is just gibberish and rarely good enough. Also, the idea was for the ChatGPT API to only do some common sense after the OCR. For example, OCR reads the book <em>Herman Melville</em> by <em>Moby Dick</em>, but the API says, “No, it is <em>Moby Dick</em> by Herman Melville,” or <em>Nobbit a unextected journ</em> is <em>Hobbit: An Unexpected Journey</em>. However, it turns out that the API then needs to do web searching.</p>
+										<p>Instead, we tested using ChatGPT to read the images directly and not using OCR for anything, and that worked a lot better. It could read most things pretty well. The only issue was that if the light was really bright, it could not read light-colored books/DVDs, and if it was dark, it could not read the dark books/DVDs.</p>
+										<p>We solved that by changing the brightness of the camera each time it stops to take images, so it takes two images with high brightness and two images with low brightness.</p>
+										<p>Here is the prompt we have for it inside the code <code>server_test.py</code>.</p>
+
+										<figure>
+											<img src="images/finala_mecha/april20.jpg" alt="Prompt used inside server_test.py" />
+											<figcaption>Prompt used inside <code>server_test.py</code>.</figcaption>
+										</figure>
+									</section>
+
+									<section class="workbook-entry">
+										<h2>21st April</h2>
+										<p>We have the robot and it works to move across the shelf. The center of mass in the direction of the shelf was a little bit too much to the left side, so now the robot tilts a bit. But that tilt kind of goes away when we connect it to the power adapter, since those jumpers push the robot a bit back to equilibrium.</p>
+
+										<figure>
+											<img src="images/finala_mecha/april21.jpg" alt="Excel results and camera readings from the robot" />
+											<figcaption>Excel results and camera readings from the robot.</figcaption>
+										</figure>
+
+										<p>Readings are going well, although we have to allow Icelandic letters in Excel.</p>
+									</section>
+
+									<section class="workbook-entry">
+										<h2>22nd April</h2>
+										<p>Everything was ready for the presentation.</p>
+										<p>Here is a video showing the robot working pretty well. The readings are not perfect, but there are definitely some that come out very well.</p>
+
+
+									</section>
+
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+					<section id="contact">
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="#">jog73@hi.is</a>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-phone"></span>
+										<h3>Phone</h3>
+										<span>(+354) 777-6768</span>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-home"></span>
+										<h3>Address</h3>
+										<span>Dalaþing 16<br />
+										203 Kópavogur<br />
+										Iceland</span>
+									</div>
+								</section>
+							</section>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>© Jón Óskar Guðmundsson. All rights reserved</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
