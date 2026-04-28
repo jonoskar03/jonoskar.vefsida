@@ -252,6 +252,31 @@
                                     <h3>Val á verkfærum</h3>
                                     <p>"Val á verkfærum rökkstudd með tilliti til fræsunar"</p>
                                     <h3>Verkfæraferlar (Toolpaths)</h3>
+
+									<p>Áður en hægt var að hefja fræsingu þurfti að útbúa verkfæraferla í Fusion 360. Fyrst var skoðað myndbönd frá  <a href="https://www.youtube.com/watch?v=mTTrG9jYQqc" target="_blank" rel="noopener noreferrer">Fab Lab Akureyri</a> á YouTube til að sjá hvernig toolpaths eru settir upp í Manufacture-umhverfinu. Þar var farið yfir hvernig hægt er að velja rétta aðgerð eftir því hvort verið er að skera út, fræsa niður í efnið eða grafa texta og merkingar.
+									Í verkefninu voru notaðir þrír helstu verkfæraferlar: 2D Contour, 2D Pocket og Engrave.
+									2D Contour var notað til að skera út ytri útlínur platnanna. Fyrir það var notaður 6.35 mm flat-end biti. Passað var að stilla inn tabs, en þeir eru litlir stubbar af efni sem eru látnir vera eftir svo plöturnar haldist fastar í heildarplötunni á meðan fræsingin fer fram og því fara plöturnar ekki á hreyfingu. Þeir voru settir á 6.35 mm breidd og 3 mm hæð.
+									</p>
+
+									<figure id="fig_contour" style="text-align: center;">
+										<img src="images/final_assignment/contour.jpg" alt="Parametrar fyrir borðspila" style="max-width: 100%; height: auto;">
+										<figcaption><b>Mynd 6.</b> 2D Contour sem sýnir leið fræsarans um efnið.</figcaption>
+									</figure>
+
+									<p>
+									2D Pocket var notað þar sem þurfti að fræsa niður í efnið án þess að skera alveg í gegn. Þar var einnig notaður 6 mm flat-end biti, stilltur sem downcut, til að fá hreinni yfirborðsáferð og minnka líkur á rifum í efsta lagi krossviðarins.
+									</p>
+									<p>
+										Engrave var síðan notað fyrir texta, tölur og merkingar. Fyrir þann hluta var notaður 30° V-biti, þar sem hann hentar vel fyrir fínni gröft og skýrari línur.
+										[kannski fint að setja inn mynd af Engrave fyrir ytri kassans]
+										Fyrir 2D Contour og 2D Pocket voru notaðar sömu Feed and Speed stillingar. Snúningshraðinn var 16000 rpm, skurðarhraðinn 2500 mm/min og Feed per Tooth var 0.156 mm. Þessar stillingar voru yfirfarnar áður en kóðinn var búinn til fyrir ShopBot-fræsarann.
+									</p>
+
+									<figure id="fig_settings" style="text-align: center;">
+										<img src="images/final_assignment/settings.jpg" alt="Stilli" style="max-width: 100%; height: auto;">
+										<figcaption><b>Mynd 7.</b> Stillingar fyrir 2D Contour og 2D Pocket.</figcaption>
+									</figure>
+
 									<h4>Borðspilakassi</h4>
 									<h4>Borðspil</h4>
                                     <p>"Verkfæraferlar(toolpaths) eru skráðir,rökstuddar og stillingar útskýrðar"</p>
@@ -273,6 +298,7 @@
 										plötuna nákvæmlega og nota þá þykkt í fræsingunni.
 									</p>
 
+
 									<figure id="fig-fraseing" style="text-align: center;">
                                     <div style="display: flex; gap: 12px; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
                                         <img src="images/final_assignment/fr1.jpg" alt="Mynd 1" style="width: 24%; height: auto;" />
@@ -284,7 +310,41 @@
                                 	</figure>
 									<h4>Frágangur efnis og Samsetning</h4>
 
-                                    <h2>Lokaniðurstaða</h2>
+									<p>Hér fyrir neðan má sjá allar plötur beint eftir að þær komu úr fræsaranum og búið var að pússa þær allar.</p>
+
+									<figure id="fig_plotur" style="text-align: center;">
+										<img src="images/final_assignment/plotur.jpg" alt="Stilli" style="max-width: 100%; height: auto;">
+										<figcaption><b>Mynd 9.</b> Allar plöturnar.</figcaption>
+									</figure>
+
+									<p>Eftir þetta bárum við viðarolíu á allar plöturnar svo að viðurinn kæmi betur út og fengi meiri dýpt í litinn.
+										Olían hjálpaði einnig til við að draga fram náttúrulega áferð viðarins og gera yfirborðið fallegra. Við bárum olíuna jafnt á með málningarbursta og pössuðum að fara vel yfir alla fleti og kanta. </p>
+
+                                    <figure id="fig-olia" style="text-align: center;">
+                                    <div style="display: flex; gap: 12px; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
+                                        <img src="images/final_assignment/olia1.jpg" alt="Mynd 1" style="width: 63%; height: auto;" />
+                                        <img src="images/final_assignment/olia2.jpg" alt="Mynd 2" style="width: 33.5%; height: auto;" />
+                                    </div>
+                                    <figcaption><b>Mynd 10.</b> Viðarolía borin á viðarplöturnar.</figcaption>
+                                	</figure>
+
+									<p>Þegar olían hafði þornað ákváðum við að mála taflborðs- og lúdóplöturnar í litum. Það var gert til að gera borðin skýrari, fallegri og skemmtilegri í notkun. Við pössuðum að mála nákvæmlega innan réttra svæða svo mynstrið kæmi vel út og lokaniðurstaðan yrði snyrtileg. Hér fyrir neðan má sjá lokaútkomu þess. </p>
+
+									<figure id="fig_ploturmaladar" style="text-align: center;">
+										<img src="images/final_assignment/plotur_malad.jpg" alt="Stilli" style="max-width: 100%; height: auto;">
+										<figcaption><b>Mynd 11.</b> Borðplöturnar málaðar.</figcaption>
+									</figure>
+
+									<p>Eftir að plöturnar höfðu þornað var komið að því að setja allt saman. Við rákumst þó á vandamál í samsetningunni þar sem kassinn festist ekki nógu vel saman og var því ekki nægilega stöðugur. Til að leysa þetta límdum við innri hólfin við ytri kassann, sem gerði bygginguna mun sterkari og tryggði að kassinn héldist betur saman. </p>
+									<p>Líkleg skýring á því af hverju hann var svona laus er að festingarnar voru ekki nógu þéttar. Það gæti hafa gerst vegna þess að fræsingin tók aðeins of mikið efni úr samskeytunum eða vegna þess að efnisþykktin var ekki alveg sú sama og gert var ráð fyrir í hönnuninni. Þar af leiðandi mynduðust smá bil á milli partanna, sem gerði það að verkum að kassinn náði ekki að festast nægilega vel saman.</p>
+
+									<figure id="fig_kassilimdur" style="text-align: center;">
+										<img src="images/final_assignment/kassilimdur.jpg" alt="Stilli" style="max-width: 100%; height: auto;">
+										<figcaption><b>Mynd 12.</b> Kassinn límdur saman.</figcaption>
+									</figure>
+
+
+									<h2>Lokaniðurstaða</h2>
 									<p>Hér má sjá lokaútkomuna á Borðspilakassanum</p>
 
 									<figure id="fig_final_photos" style="text-align: center;">
