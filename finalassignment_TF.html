@@ -244,16 +244,17 @@
 									<h2>Undirbúningur fyrir fræsingu</h2>
 									<h3>Lokaval á stærð og gerð efnis</h3>
 									<p>
-									Lokaval á efninu fyrir borðspilakassann var 12 mm þykkur grenikrossviður en platan þurfti að vera 860 mm X 450 mm.
-									Spilaborðin voru hins vegar 6 mm þykkur birkikrossviður og það þurfti um 520 mm x 270 mm plötu fyrir þær.
+									Lokaval á efninu fyrir borðspilakassann endaði á að vera 12 mm þykkur grenikrossviður en platan þurfti að vera 860 mm X 450 mm.
+									Borðspilin voru hins vegar 6 mm þykkur birkikrossviður og það þurfti um 520 mm x 270 mm plötu fyrir þær.
 									</p>
                                     <h3>Verkfæraferlar (Toolpaths)</h3>
 
 									<p>Áður en hægt var að hefja fræsingu þurfti að útbúa verkfæraferla í Fusion 360. Fyrst var skoðað myndbönd frá  <a href="https://www.youtube.com/watch?v=mTTrG9jYQqc" target="_blank" rel="noopener noreferrer">Fab Lab Akureyri</a> á YouTube til að sjá hvernig toolpaths eru settir upp í Manufacture-umhverfinu. Þar var farið yfir hvernig hægt er að velja rétta aðgerð eftir því hvort verið er að skera út, fræsa niður í efnið eða grafa texta og merkingar.
 									Í verkefninu voru notaðir þrír helstu verkfæraferlar: 2D Contour, 2D Pocket og Engrave.
-									2D Contour var notað til að skera út ytri útlínur platnanna. Fyrir það var notaður 6.35 mm flat-end biti. Passað var að stilla inn tabs, en þeir eru litlir stubbar af efni sem eru látnir vera eftir svo plöturnar haldist fastar í heildarplötunni á meðan fræsingin fer fram og því fara plöturnar ekki á hreyfingu. Þeir voru settir á 6.35 mm breidd og 3 mm hæð.
 									</p>
-
+									<p>
+									2D Contour var notað til að skera út ytri útlínur platnanna. Fyrir það var notaður 6 mm flat-end biti. Passað var að stilla inn tabs, en þeir eru litlir stubbar af efni sem eru látnir vera eftir svo plöturnar haldist fastar í heildarplötunni á meðan fræsingin fer fram og því fara plöturnar ekki á hreyfingu. Þeir voru settir á 6 mm breidd og 3 mm hæð.
+									</p>
 									<figure id="fig_contour" style="text-align: center;">
 										<img src="images/final_assignment/contour.jpg" alt="Parametrar fyrir borðspila" style="max-width: 100%; height: auto;">
 										<figcaption><b>Mynd 6.</b> 2D Contour sem sýnir leið fræsarans um efnið.</figcaption>
@@ -264,13 +265,20 @@
 									</p>
 									<p>
 										Engrave var síðan notað fyrir texta, tölur og merkingar. Fyrir þann hluta var notaður 30° V-biti, þar sem hann hentar vel fyrir fínni gröft og skýrari línur.
-										[kannski fint að setja inn mynd af Engrave fyrir ytri kassans]
-										Fyrir 2D Contour og 2D Pocket voru notaðar sömu Feed and Speed stillingar. Snúningshraðinn var 16000 rpm, skurðarhraðinn 2500 mm/min og Feed per Tooth var 0.156 mm. Þessar stillingar voru yfirfarnar áður en kóðinn var búinn til fyrir ShopBot-fræsarann.
 									</p>
+									<figure id="fig_engrave" style="text-align: center;">
+										<img src="images/final_assignment/engrave.jpg" alt="Parametrar fyrir borðspila" style="max-width: 100%; height: auto;">
+										<figcaption><b>Mynd 6.</b> 2D Engrave sem sýnir leið fræsarans um efnið.</figcaption>
+									</figure>
+									<p>
+										Fyrir 2D Contour og 2D Pocket á borðspilunum voru notaðar sömu Feed and Speed stillingar. Snúningshraðinn var 16000 rpm, skurðarhraðinn 2500 mm/min og Feed per Tooth var 0.156 mm. 2D Pocket hefur einnig  Þessar stillingar voru yfirfarnar áður en kóðinn var búinn til fyrir ShopBot-fræsarann.
+									</p>
+
+									<p>Ferlið fyrir fræsarann verður þannig að hann gerir fyrstu umferðina með downcut-bita, þannig að áferðin á toppi platnanna verði fínni. Allar hinar umferðir í contour verða hins vegar downcut. Þar sem við erum að notast við 6 mm bita förum við í hverri umferð dýpt sem samsvarar radíus hans, þ.e. 3 mm. </p>
 
 									<figure id="fig_settings" style="text-align: center;">
 										<img src="images/final_assignment/settings.jpg" alt="Stilli" style="max-width: 100%; height: auto;">
-										<figcaption><b>Mynd 7.</b> Stillingar fyrir 2D Contour og 2D Pocket.</figcaption>
+										<figcaption><b>Mynd 7.</b> Stillingar fyrir 2D Contour og 2D Pocket á borðspilaplötum.</figcaption>
 									</figure>
 
                                     <h2>Fræsingin</h2>
