@@ -195,7 +195,7 @@
 										undirbúin í Inkscape, þar sem þau voru stillt í rétta stærð fyrir kassann og
 										vistuð sem DXF-skjöl. DXF-skjölin voru því næst flutt inn í Fusion 360 og
 										notuð til að gera cut extrude í plöturnar. Parametrana fyrir borðspilakassann
-										má sjá á <a href="#fig5_assg1">Mynd 5</a>.
+										má sjá á <a href="#fig5_assg1">Mynd 4</a>.
 									</p>
 
 									<figure id="fig5_assg1" style="text-align: center;">
@@ -244,7 +244,7 @@
 									<h2>Undirbúningur fyrir fræsingu</h2>
 									<h3>Lokaval á stærð og gerð efnis</h3>
 									<p>
-									Lokaval á efninu fyrir borðspilakassann endaði á að vera 12 mm þykkur grenikrossviður en platan þurfti að vera 860 mm X 450 mm.
+									Lokaval á efninu fyrir borðspilakassann endaði á að vera 12 mm þykkur grenikrossviður, þar sem þeir voru nú þegar til í VR3, en platan þurfti að vera 860 mm X 450 mm.
 									Borðspilin voru hins vegar 6 mm þykkur birkikrossviður og það þurfti um 520 mm x 270 mm plötu fyrir þær.
 									</p>
                                     <h3>Verkfæraferlar (Toolpaths)</h3>
@@ -268,18 +268,24 @@
 									</p>
 									<figure id="fig_engrave" style="text-align: center;">
 										<img src="images/final_assignment/engrave.jpg" alt="Parametrar fyrir borðspila" style="max-width: 100%; height: auto;">
-										<figcaption><b>Mynd 6.</b> 2D Engrave sem sýnir leið fræsarans um efnið.</figcaption>
+										<figcaption><b>Mynd 7.</b> 2D Engrave sem sýnir leið fræsarans um efnið.</figcaption>
 									</figure>
 									<p>
 										Fyrir 2D Contour og 2D Pocket á borðspilunum voru notaðar sömu Feed and Speed stillingar. Snúningshraðinn var 16000 rpm, skurðarhraðinn 2500 mm/min og Feed per Tooth var 0.156 mm. 2D Pocket hefur einnig  Þessar stillingar voru yfirfarnar áður en kóðinn var búinn til fyrir ShopBot-fræsarann.
 									</p>
 
-									<p>Ferlið fyrir fræsarann verður þannig að hann gerir fyrstu umferðina með downcut-bita, þannig að áferðin á toppi platnanna verði fínni. Allar hinar umferðir í contour verða hins vegar downcut. Þar sem við erum að notast við 6 mm bita förum við í hverri umferð dýpt sem samsvarar radíus hans, þ.e. 3 mm. </p>
-
 									<figure id="fig_settings" style="text-align: center;">
 										<img src="images/final_assignment/settings.jpg" alt="Stilli" style="max-width: 100%; height: auto;">
-										<figcaption><b>Mynd 7.</b> Stillingar fyrir 2D Contour og 2D Pocket á borðspilaplötum.</figcaption>
+										<figcaption><b>Mynd 8.</b> Stillingar fyrir 2D Contour og 2D Pocket á borðspilaplötum.</figcaption>
 									</figure>
+									<p>
+										Ferlið fyrir fræsinguna er þannig að fyrsta contour-umferðin er framkvæmd með downcut-bita.
+										Það er gert til að fá hreinni og fallegri áferð á efri brún platnanna . Eftir það eru hlutirnir
+										skornir dýpra í nokkrum umferðum. Þar sem notaður var 6 mm fræsibiti er stepdown stillt á
+										3 mm, sem samsvarar radíus bitans. Þannig tók fræsirinn 3 mm dýpt í hverri umferð þar til
+										hann hafði skorið í gegnum efnið.
+									</p>
+
 
                                     <h2>Fræsingin</h2>
 									<p>
@@ -307,7 +313,7 @@
                                         <img src="images/final_assignment/fr3.jpg" alt="Mynd 3" style="width: 24%; height: auto;" />
 										<img src="images/final_assignment/fr4.jpg" alt="Mynd 3" style="width: 24%; height: auto;" />
                                     </div>
-                                    <figcaption><b>Mynd 6.</b> Fræsingin.</figcaption>
+                                    <figcaption><b>Mynd 9.</b> Fræsingin.</figcaption>
                                 	</figure>
 									<h4>Frágangur efnis og Samsetning</h4>
 
@@ -315,7 +321,7 @@
 
 									<figure id="fig_plotur" style="text-align: center;">
 										<img src="images/final_assignment/plotur.jpg" alt="Stilli" style="max-width: 100%; height: auto;">
-										<figcaption><b>Mynd 9.</b> Allar plöturnar.</figcaption>
+										<figcaption><b>Mynd 10.</b> Allar plöturnar.</figcaption>
 									</figure>
 
 									<p>Eftir þetta bárum við viðarolíu á allar plöturnar svo að viðurinn kæmi betur út og fengi meiri dýpt í litinn.
@@ -326,14 +332,14 @@
                                         <img src="images/final_assignment/olia1.jpg" alt="Mynd 1" style="width: 63%; height: auto;" />
                                         <img src="images/final_assignment/olia2.jpg" alt="Mynd 2" style="width: 33.5%; height: auto;" />
                                     </div>
-                                    <figcaption><b>Mynd 10.</b> Viðarolía borin á viðarplöturnar.</figcaption>
+                                    <figcaption><b>Mynd 11.</b> Viðarolía borin á viðarplöturnar.</figcaption>
                                 	</figure>
 
 									<p>Þegar olían hafði þornað ákváðum við að mála taflborðs- og lúdóplöturnar í litum. Það var gert til að gera borðin skýrari, fallegri og skemmtilegri í notkun. Við pössuðum að mála nákvæmlega innan réttra svæða svo mynstrið kæmi vel út og lokaniðurstaðan yrði snyrtileg. Hér fyrir neðan má sjá lokaútkomu þess. </p>
 
 									<figure id="fig_ploturmaladar" style="text-align: center;">
 										<img src="images/final_assignment/plotur_malad.jpg" alt="Stilli" style="max-width: 100%; height: auto;">
-										<figcaption><b>Mynd 11.</b> Borðplöturnar málaðar.</figcaption>
+										<figcaption><b>Mynd 12.</b> Borðplöturnar málaðar.</figcaption>
 									</figure>
 
 									<p>Eftir að plöturnar höfðu þornað var komið að því að setja allt saman. Við rákumst þó á vandamál í samsetningunni þar sem kassinn festist ekki nógu vel saman og var því ekki nægilega stöðugur. Til að leysa þetta límdum við innri hólfin við ytri kassann, sem gerði bygginguna mun sterkari og tryggði að kassinn héldist betur saman. </p>
@@ -341,7 +347,7 @@
 
 									<figure id="fig_kassilimdur" style="text-align: center;">
 										<img src="images/final_assignment/kassilimdur.jpg" alt="Stilli" style="max-width: 100%; height: auto;">
-										<figcaption><b>Mynd 12.</b> Kassinn límdur saman.</figcaption>
+										<figcaption><b>Mynd 13.</b> Kassinn límdur saman.</figcaption>
 									</figure>
 
 									<p>Einnig er gaman að segja frá því að við 3D-prentuðum lúdókalla. Síðan máluðum við þá í sömu litum og reitirnir á lúdóborðinu. Þannig pössuðu kallarnir vel við borðið og allt leit betur út saman. Við geislaskárum líka út svarta og hvíta checkers-kalla. </p>
@@ -384,7 +390,7 @@
 										</div>
 
 										<figcaption>
-											<b>Mynd X.</b> Lokaútkoma borðspilasettsins.
+											<b>Mynd 14.</b> Lokaútkoma borðspilasettsins.
 										</figcaption>
 									</figure>
 
@@ -395,7 +401,7 @@
 
 									<p>
 										Ef verkefnið væri endurtekið hefði verið betra að velja aðra samsetningu af
-										fræsibita og efnisþykkt. Þar sem notaður var 6,35 mm fræsibiti hefði hentað betur
+										fræsibita og efnisþykkt. Þar sem notaður var 6 mm fræsibiti hefði hentað betur
 										að nota þykkara efni, til dæmis um 20 mm krossvið. Þá hefðu T-bones ekki orðið
 										jafn stór hluti af press-fit samskeytunum hlutfallslega séð, og samskeytin hefðu
 										líklega náð betra gripi og orðið stöðugri.
